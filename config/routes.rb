@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get("/square/results", {:controller => "calc", :action => "calc_square"})
 
-  
+  get("/square_root/new", {:controller => "calc", :action => "square_root_new"})
+
+  get("/square_root/results", {:controller => "calc", :action => "calc_square_root"})
 
 end

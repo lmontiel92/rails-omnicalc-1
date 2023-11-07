@@ -16,4 +16,19 @@ class CalcController < ApplicationController
 
   end
 
+  def square_root_new
+    
+    render ({:template => "view_templates/square_root_new"})
+
+  end
+
+  def calc_square_root
+    
+    @user_square_root_input = params.fetch("user_number").to_f
+    @user_square_root_result = Math.sqrt(@user_square_root_input)
+
+    render ({:template => "view_templates/square_root_results"})
+
+  end
+
 end
